@@ -1,12 +1,14 @@
 
-import { Button } from "@/components/ui/button";
 import { useState, useRef } from "react";
+import { useTranslation } from "react-i18next";
+import { Button } from "@/components/ui/button";
 
 interface ImageUploaderProps {
   onImageSelect: (imageUrl: string) => void;
 }
 
 const ImageUploader = ({ onImageSelect }: ImageUploaderProps) => {
+  const { t } = useTranslation();
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -45,32 +47,43 @@ const ImageUploader = ({ onImageSelect }: ImageUploaderProps) => {
   };
 
   return (
-    <div
-      className={`border-2 border-dashed rounded-lg p-8 text-center ${
-        isDragging ? "border-green-500 bg-green-50" : "border-gray-300"
-      }`}
-      onDragOver={handleDragOver}
-      onDragLeave={handleDragLeave}
-      onDrop={handleDrop}
-    >
-      <div className="space-y-4">
-        <p className="text-gray-600">
-          Drag and drop an image here, or click to select
+    <div>
+      <div className="mb-4 text-center">
+        <h3 className="text-lg font-medium text-green-700">
+          {t("upload.identify")}
+        </h3>
+        <p className="text-gray-500 text-sm mt-1">
+          {t("upload.uploadPest")}
         </p>
-        <Button
-          onClick={() => fileInputRef.current?.click()}
-          variant="outline"
-          className="bg-white hover:bg-green-50"
-        >
-          Select Image
-        </Button>
-        <input
-          type="file"
-          ref={fileInputRef}
-          onChange={handleFileSelect}
-          accept="image/*"
-          className="hidden"
-        />
+      </div>
+      
+      <div
+        className={`border-2 border-dashed rounded-lg p-8 text-center ${
+          isDragging ? "border-green-500 bg-green-50" : "border-gray-300"
+        }`}
+        onDragOver={handleDragOver}
+        onDragLeave={handleDragLeave}
+        onDrop={handleDrop}
+      >
+        <div className="space-y-4">
+          <p className="text-gray-600">
+            {t("upload.dragDrop")}
+          </p>
+          <Button
+            onClick={() => fileInputRef.current?.click()}
+            variant="outline"
+            className="bg-white hover:bg-green-50"
+          >
+            {t("upload.select")}
+          </Button>
+          <input
+            type="file"
+            ref={fileInputRef}
+            onChange={handleFileSelect}
+            accept="image/*"
+            className="hidden"
+          />
+        </div>
       </div>
     </div>
   );

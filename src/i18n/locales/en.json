@@ -1,0 +1,61 @@
+
+{
+  "app": {
+    "title": "Pest Recognition System",
+    "subtitle": "Advanced AI-powered pest identification system for agricultural and research purposes"
+  },
+  "navigation": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "login": "Login",
+    "signup": "Sign Up",
+    "logout": "Logout",
+    "prediction": "Prediction",
+    "contact": "Contact Us"
+  },
+  "auth": {
+    "login": "Login",
+    "signup": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "loginNow": "Login now",
+    "signupNow": "Sign up now"
+  },
+  "upload": {
+    "title": "Upload Image",
+    "dragDrop": "Drag and drop an image here, or click to select",
+    "select": "Select Image",
+    "identify": "IDENTIFY THE PEST THAT WAS CAUGHT BY YOUR PLANT",
+    "uploadPest": "Upload an image of pest"
+  },
+  "results": {
+    "title": "Analysis Results",
+    "loading": "Analyzing image...",
+    "noImage": "No image selected. Upload an image to see the analysis results.",
+    "confidence": "Confidence",
+    "isBeneficial": "Beneficial for crops",
+    "isHarmful": "Harmful for crops",
+    "usesTitle": "Uses and Information",
+    "impactTitle": "Environmental Impact"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "recentScans": "Recent Scans",
+    "pestDistribution": "Pest Distribution",
+    "welcome": "Welcome to your dashboard",
+    "scanHistory": "Scan History"
+  },
+  "about": {
+    "title": "About the Project",
+    "species": "102 Pest Species",
+    "speciesDesc": "Comprehensive coverage of common agricultural pests",
+    "ai": "AI-Powered",
+    "aiDesc": "Using advanced Convolutional Neural Networks",
+    "research": "Research-Grade",
+    "researchDesc": "Built on peer-reviewed academic research"
+  }
+}
